@@ -37,7 +37,8 @@ export default () =>
                 <Paragraph>Check out this video or read the text below!</Paragraph>
                 <FilmAndFeaturesContainer>
                     <VideoContainer>
-                        <Video src={video} type="video/mp4" controls />
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/q43XiHxvX18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        {/* <Video src={video} type="video/mp4" controls /> */}
                     </VideoContainer>
                     <FeaturesContainer>
                         <div>Features</div>
