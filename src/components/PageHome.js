@@ -99,7 +99,7 @@ export default () =>
                 <Title>Feedback for the Future?</Title>
                 <Paragraph>I am already incredibly happy with this baseline prototype, but would love to go further. Now I will gauge the interest people have and the feedback I get. If you have any feedback, I’ve made a subreddit where you can post all your questions and your feedback. You can also make an issue on GitHub and we can look at it together! :) </Paragraph>
                 <IconsContainer>
-                    <Icon src={iconGitHubPng} href="https://github.com/" target="_blank"/>
+                    <Icon src={iconGitHubPng} href="https://github.com/defenestrant/Jeight/" target="_blank"/>
                     <Icon src={iconRedditPng} href="https://www.reddit.com/r/jeight/" target="_blank"/>
                 </IconsContainer>
                 <Title>Further concepts</Title>
@@ -118,7 +118,7 @@ export default () =>
                         <GamepadSpecials />
                     </FeatureContainer>
                 </OuterContainer>
-                <J8Showoff letterGroups={[["a","b","c"], ["a","b","c"], ["d","e","f"]]} />
+                {/* <J8Showoff letterGroups={[["a","b","c"], ["a","b","c"], ["d","e","f"]]} /> */}
             </ InnerContainer>
         </OuterContainer>
     )
