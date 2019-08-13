@@ -13,12 +13,12 @@ Jeight.io is a prototype that hopes to be an alternative way to type sentences u
 ## Goal
 The goal was to show it's possible to provide a more time-efficient way of typing with your controller. Unfortunately, there are currently no practical uses. I can not do much more than show off the fact that the prototype works. It cannot be implemented on consoles without official development from Microsoft (for Xbox) or Sony (for Playstation).
 
-## Future development and help
-If lots of people would want this for desktop games, this could possibly be implemented. However I do not currently have the skillset to do this and would greatly benefit from the help of someone more at home in the world of C++/DirectX and native game development. So if this is you, and you see a future in this project, be sure to shoot me a message. If you work for the Microsoft Xbox development team or the Sony Playstation development team, I am open for any opportunity :)
+## What I could use help with in the future
+If lots of people would want this for desktop games, it could be implemented. However I do not currently have the skillset to do so. I would gladly welcome help of someone more at home in the world of C++/DirectX and native game development. So if this is you, and you see a future in this project, be sure to shoot me a message. If you work for the Microsoft Xbox development team or the Sony Playstation development team, you can do so too :)
 
 ## Technical details
 This repository contains the entire website of jeight.io. Publishing is done via CI/CD on the master branch.
-The project (and website) are written as a Javascript/ application with a focus (as a learning experience) on functional programming. It's component based written with React and Styled-Components. Throughout the entire code-base, I make heavy use of the functional programming utility library RamdaJS and have tried to limit the amount of procedural code, unless I did not immediately find a functional solution.
+The project (and website) are written as a Javascript application with a focus (as a learning experience) on functional programming. It's component based, written in functional vanilla React with Styled-Components. Throughout the entire code-base, I make heavy use of the functional programming utility library RamdaJS and have tried to limit the amount of procedural code, unless I did not quickly find a functional solution.
 
 ## Available Scripts
 
