@@ -10,6 +10,8 @@ test it @ https://jeight.io/prototype
 
 Jeight.io is a prototype that hopes to be an alternative way to type sentences using your gamepad. It's closely related to the T9 keyboards found on old cellphones. But instead of using keys, you move the 2 joysticks each in 4 possible directions to type. Every direction (8 in total) is linked to a group of letters.
 
+![gamepad example](https://jeight.io/gamepad.png)
+
 ## Goal
 The goal was to show it's possible to provide a more time-efficient way of typing with your controller. Unfortunately, there are currently no practical uses. I can not do much more than show off the fact that the prototype works. It cannot be implemented on consoles without official development from Microsoft (for Xbox) or Sony (for Playstation).
 
