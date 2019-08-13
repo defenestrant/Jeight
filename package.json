@@ -1,0 +1,43 @@
+{
+  "name": "j8website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.9.0",
+    "lodash-es": "^4.17.11",
+    "memoize-one": "^5.0.4",
+    "ramda": "^0.26.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "recompose": "^0.30.0",
+    "styled-components": "^4.2.1",
+    "url-pattern": "^1.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && mv build/index.html build/200.html",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "react-scripts": "3.0.1"
+  }
+}

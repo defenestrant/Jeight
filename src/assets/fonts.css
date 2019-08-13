@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Avenir Next";
+    src: url("/fonts/avenir-next/AvenirNext-UltraLight.ttf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url("/fonts/avenir-next/AvenirNext-Medium.ttf");
+    font-weight: 300;
+}
+
+

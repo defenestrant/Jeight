@@ -1,0 +1,1 @@
+DONE - load dictionaries async
