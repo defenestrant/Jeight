@@ -395,22 +395,22 @@ export default ({ joyDirStrMap, languageBaseDocmap, additionsBaseDocmap, setting
 
     }
 
-    useEffect(() =>
-    {
-        document.addEventListener("keyup", onKeyUp)
-        return () => document.removeEventListener("keyup", onKeyUp)
-    })
+    // useEffect(() =>
+    // {
+    //     document.addEventListener("keyup", onKeyUp)
+    //     return () => document.removeEventListener("keyup", onKeyUp)
+    // })
 
     useEffect(() => subscribeToGamepadData("controllerkeyboard", gamepadDataListener))
 
-    const onKeyUp = R.cond([
-        [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.left)), moveCursorLeft ],
-        [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.right)), moveCursorRight ],
-        [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.down)), nextJ8InPhrase ],
-        [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.up)), previousJ8InPhrase ],
-        [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.backspace)), onBackSpace ],
-        [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.space)), addSpace ]
-    ])
+    // const onKeyUp = R.cond([
+    //     [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.left)), moveCursorLeft ],
+    //     [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.right)), moveCursorRight ],
+    //     [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.down)), nextJ8InPhrase ],
+    //     [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.up)), previousJ8InPhrase ],
+    //     [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.backspace)), onBackSpace ],
+    //     [ R.pipe(keyCodeFromEvent, R.equals(keyCodes.space)), addSpace ]
+    // ])
 
     const sendIt = () =>
     {
@@ -535,8 +535,7 @@ export default ({ joyDirStrMap, languageBaseDocmap, additionsBaseDocmap, setting
 
         { gamepadData == null && (
         <div>
-            <NoDetectedMain>No gamepad detected.</NoDetectedMain>
-            <NoDetectedMain>Please connect a gamepad.</NoDetectedMain>
+            <NoDetectedMain>Please connect a gamepad to try out the prototype.</NoDetectedMain>
             <NoDetectedSub>If you still see this message after having connected a gamepad, that's normal, you can test the prototype.</NoDetectedSub>
         </div> 
         )}
