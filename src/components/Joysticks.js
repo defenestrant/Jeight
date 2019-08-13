@@ -279,7 +279,7 @@ export default ({ joyDirStrMap, languageBaseDocmap, additionsBaseDocmap, setting
             phrase: R.insert(cursorPosition + 1)(" ")(text.phrase),
             casing: R.insert(cursorPosition + 1)("l")(text.casing)
         }))
-        setCursorPosition(R.add(1))
+        setCursorPosition(currPos => text.phrase.length == 0 ? 0 : currPos + 1)
     }
 
     const addSpecialCharacter = () =>
@@ -294,7 +294,8 @@ export default ({ joyDirStrMap, languageBaseDocmap, additionsBaseDocmap, setting
             phrase: newphrase,
             casing: R.insert(cursorPosition + 1)("l")(text.casing)
         }))
-        setCursorPosition(R.add(1))
+
+        setCursorPosition(currPos => text.phrase.length == 0 ? 0 : currPos + 1)
     }
 
     const addEnter = () =>
