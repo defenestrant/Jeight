@@ -88,7 +88,7 @@ export default ({ savedSettings, savedAdditionsBaseDocmap, visited }) =>
 
     const menuItems = [
         {
-            path: "/home",
+            path: "/",
             name: "Home",
             component: <PageHome />
         },
@@ -112,11 +112,11 @@ export default ({ savedSettings, savedAdditionsBaseDocmap, visited }) =>
                 onResetSettings={resetSettings}
                 />
         },
-        {
-            path: "/conceptvideo",
-            name: "Concept Video",
-            component: <PageVideo visited={visited}/>
-        },
+        // {
+        //     path: "/conceptvideo",
+        //     name: "Concept Video",
+        //     component: <PageVideo visited={visited}/>
+        // },
     ]
 
 

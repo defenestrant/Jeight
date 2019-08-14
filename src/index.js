@@ -10,25 +10,23 @@ const history = createBrowserHistory()
 window.jeighthistory = history
 
 
-const homepageRedirect = () => {
-    if(localStorage.getItem("visited") == null)
-    {
-        localStorage.setItem("visited", true)
-        history.replace("/conceptvideo")
-        return
-    }
+// const homepageRedirect = () => {
+//     // if(localStorage.getItem("visited") == null)
+//     // {
+//     //     localStorage.setItem("visited", true)
+//     //     history.replace("/conceptvideo")
+//     //     return
+//     // }
+//     // history.replace("/home")
+// }
 
+// // value -> list -> bool
+// const equalsAny = val => R.any(R.equals(val))
 
-    history.replace("/home")
-}
-
-// value -> list -> bool
-const equalsAny = val => R.any(R.equals(val))
-
-if(!equalsAny(window.location.pathname)(["/home", "/prototype", "/settings", "/conceptvideo"]))
-{
-    homepageRedirect()
-}
+// if(!equalsAny(window.location.pathname)(["/prototype", "/settings"]))
+// {
+//     homepageRedirect()
+// }
 
 
 //const localStorageGetAndParse = R.pipe(localStorage.getItem, JSON.parse) // Doesn't work for some reason - TypeError: Illegal Invocation
