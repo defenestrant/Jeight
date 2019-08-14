@@ -20,10 +20,13 @@ import iconReactPng from "../assets/icon-reactjs.png"
 import iconRedditPng from "../assets/icon-reddit.png"
 
 import { Circle, Square, Triangle, Cross, Arrow, Bumper, Trigger } from "./Fancy"
-import { useInterval } from "./hooks";
+import { useInterval } from "./hooks"
+import { loadImg, wait } from "../logic/utils"
 
 export default () =>
 {
+
+    
 
     return (
         <OuterContainer>
@@ -32,7 +35,7 @@ export default () =>
                 <Title>What is it?</Title>
                 <Paragraph>Jeight.io is a prototype for a new type of virtual keyboard to use with a gamepad. It’s written in Javascript and that means that you can <Underline>test it right here</Underline> in your browser on Windows or MacOS! No need to download anything.</Paragraph>
                 <Paragraph>The only thing you need to do is connect your controller to your computer and go to the <Underline>prototype page</Underline>. Make sure to use the latest version of Chrome or Firefox.</Paragraph>
-                <FastTypeGif src={typeFastGif} />
+                <OptimizedFastTypeGif src={typeFastGif} />
                 <Title>How to use it?</Title>
                 <Paragraph>Check out this video or read the text below!</Paragraph>
                 <FilmAndFeaturesContainer>
@@ -139,9 +142,35 @@ const InnerContainer = styled.div`
 `
 
 const FastTypeGif = styled.img`
-    //transform: scale(0.6);
     max-width: 100%;
+    animation: fadein 1s 2s forwards;
+    opacity: 0;
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
 `
+
+const OptimizedFastTypeGif = ({src}) => {
+
+    const [status, setStatus] = React.useState("loading")
+
+    React.useEffect(() => {
+        (async () => {
+            await wait(100)
+            console.log("after wait")
+            await loadImg(src)
+            console.log("after loadimg")
+            setStatus("loaded")
+        })()
+    }, [src])
+
+    if(status == "loading")
+        return null
+    
+    return <FastTypeGif src={src} />
+}
 
 const Title = styled.h2`
     margin-top: 50px;

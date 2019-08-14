@@ -66,6 +66,16 @@ export const generateTwoHighContrastRandomColors = () =>
     return generateRandomBit() ? [hex2, hex1] : [hex1, hex2]
 }
 
+
+export const wait = ms => new Promise(resolve => setTimeout(resolve, ms))
+
+export const loadImg = async url => new Promise(res => {
+    const img = new Image() 
+    img.onload = () => res()
+    img.src = url
+})
+
+
 console.log("HEX CONVERSION: ", hexToRgb("#C332D7"))
 
 console.log("CONTRAST: ", contrastHex("#C332D7", "#A845CE"))

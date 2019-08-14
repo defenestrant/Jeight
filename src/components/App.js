@@ -16,6 +16,7 @@ import GlobalStyles from "./GlobalStyles"
 
 import languageBaseDocmapUrl_EN from "../assets/basedocmap-en"
 import languageBaseDocmapUrl_NL from "../assets/basedocmap-nl"
+import { wait } from "../logic/utils";
 
 const languageBaseDocmapUrls = {
     en: languageBaseDocmapUrl_EN,
@@ -52,7 +53,9 @@ export default ({ savedSettings, savedAdditionsBaseDocmap, visited }) =>
         if(languageBaseDocmaps[settings.language] != null)
             return
 
+
         const fetchData = async () => {
+            await wait(500)
             const baseDocmapResponse = await fetch(languageBaseDocmapUrls[settings.language])
             const baseDocmap = await baseDocmapResponse.json()
             setLanguageBaseDocmaps(v => ({...v, [settings.language]: baseDocmap}))
