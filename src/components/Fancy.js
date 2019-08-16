@@ -215,7 +215,7 @@ const SquareBorder = styled.div`
 
 export const Square = ({active, gamepadType = "ps"}) => (
     <Circler active={active}>
-        {gamepadType == "ps" ? <SquareBorder active={active}/> : <InteriorLetter active={active}>C</InteriorLetter>}
+        {gamepadType == "ps" ? <SquareBorder active={active}/> : <InteriorLetter active={active}>X</InteriorLetter>}
     </Circler>
 )
 
@@ -231,6 +231,6 @@ const TriangleSvg = styled.div`
 
 export const Triangle = ({active, gamepadType = "ps"}) => (
     <Circler active={active}>
-        {gamepadType == "ps" ? <TriangleSvg active={active}/> : <InteriorLetter active={active}>D</InteriorLetter>}
+        {gamepadType == "ps" ? <TriangleSvg active={active}/> : <InteriorLetter active={active}>Y</InteriorLetter>}
     </Circler>
 )
