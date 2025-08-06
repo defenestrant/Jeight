@@ -38,6 +38,6 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "5.0.1"
   }
 }
