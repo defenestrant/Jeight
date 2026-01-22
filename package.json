@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "history": "^4.9.0",
-    "lodash-es": "^4.17.11",
+    "lodash-es": "^4.17.23",
     "memoize-one": "^5.0.4",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
